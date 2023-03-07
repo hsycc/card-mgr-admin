@@ -125,12 +125,12 @@ const User: React.FC = () => {
     },
     {
       title: '创建时间',
-      dataIndex: 'createdAt',
+      dataIndex: 'created_at',
       valueType: 'dateTime',
     },
     {
       title: '更新时间',
-      dataIndex: 'updatedAt',
+      dataIndex: 'updated_at',
       valueType: 'dateTime',
     },
     {
@@ -199,7 +199,7 @@ const User: React.FC = () => {
     try {
       const { data } = await QueryAllUsers(query);
       return {
-        data: data?.list || [],
+        data: data?.results || [],
         total: data?.pagination?.total,
         success: true,
       };
